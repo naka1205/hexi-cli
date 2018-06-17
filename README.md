@@ -1,5 +1,3 @@
-![Hexi](/tutorials/screenshots/logoAndIllustration.png)
-
 Hexi
 ====
 
@@ -29,75 +27,74 @@ JavaScript（ES6 / 7,20015/6），但编译到ES5（使用[Babel](https://babelj
 
 好的，我知道了？你知道JavaScript变量，函数，数组和对象是什么以及如何使用它们吗？你知道 [JSON data files](http://www.copterlabs.com/blog/json-what-it-is-how-it-works-how-to-use-it/)是什么吗？你使用过[Canvas Drawing API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas)吗？然后你就可以开始使用Hexi了！  
 
-当然，Hexi完全可以自由使用：为了任何事情，永远！它是在加拿大（多伦多，汉密尔顿），印度（克卢谷，拉达克），尼泊尔（加德满都，博克拉，安纳普尔纳大本营），泰国（帕岸岛，高涛）和南非（开普敦）写成的，结果是对游戏设计的API可用性进行了15年的研究。“Hexi”这个名字来自 ["Hex"](https://en.wiktionary.org/wiki/hex) + ["Pixi"](https://github.com/pixijs/pixi.js/) = "Hexi". [It has absolutely no other meaning](https://www.youtube.com/watch?v=XYGmNs6274A).。
+当然，Hexi完全可以自由使用：为了任何事情，永远！它是在加拿大（多伦多，汉密尔顿），印度（克卢谷，拉达克），尼泊尔（加德满都，博克拉，安纳普尔纳大本营），泰国（帕岸岛，高涛）和南非（开普敦）写成的，结果是对游戏设计的API可用性进行了15年的研究。“Hexi”这个名字来自 ["Hex"](https://en.wiktionary.org/wiki/hex) + ["Pixi"](https://github.com/pixijs/pixi.js/) = "Hexi". [It has absolutely no other meaning](https://www.youtube.com/watch?v=XYGmNs6274A)。
 
 ### 目录:
-1. [Hexi的特点](#features)
-2. [模块](#modules)
-3. [快速启动](#quickstart)
-  1. [HTML容器页面](#thehtmlcontainer)
-  2. [Hexi的结构](#hexisarchitecture)
-  3. [设置和启动Hexi](#settingupandstartinghexi)
-  4. [加载函数](#theloadfunction)
-  5. [设置函数](#thesetupfunction)
-  6. [运行函数](#thesplayfunction)
-  7. [进一步考虑](#takingitfurther)
-4. [教程](#tutorials)
-  1. [宝藏猎人](#treasure)
-    1. [设置HTML容器页面](#settingup)
-    2. [初始化Ga引擎](#initializing)
-    3. [定义你的"global" 变量](#defineglobals)
-    4. [使用设置函数初始化您的游戏](#setupfunction)
-      1. [自定义画布](#customizing)
-      2. [创建`chimes`声音对象](#creatingsound)
-      3. [制作游戏场景](#gamescenes)
-      4. [制作精灵](#makingsprites)
-      5. [定位精灵](#positioningsprites)
-      6. [分配动态属性](#dynamicproperties)
-      7. [创造敌人精灵](#enemysprites)
-      8. [生命栏](#healthbar)
-      9. [场景游戏](#gameoverscene)
-      10. [按键交互](#keyboard)
-      11. [设置游戏状态](#gamestate)
-    5. [具有播放功能循环的游戏逻辑](#gamelogic)
-      1. [移动玩家精灵](#movingplayer)
-      2. [在屏幕边界内包含精灵](#boundries)
-      3. [与敌人相撞](#collisionenemy)
-        1. [与宝藏碰撞](#collisiontreasure)
-      4. [结束游戏](#endinggame1)
-    6. [使用图像](#usingimages)
-      1. [个人图像](#individualimages)
-        1. [加载图像文件](#loadingimagefile)
-        2. [用图像制作精灵](#makingsprites)
-        3. [对收容区域进行微调](#finetuning)
-    7. [使用纹理图集](#textureatlas)
-      1. [准备图像](#preparingimages)
-      2. [加载纹理图集](#loadingatlas)
-  2. [Alien Armada](#alienarmada)
-    1. [加载和使用自定义字体](#customfonts)
-    2. [在浏览器中缩放游戏中心](#scalebrowser)
-    3. [加载进度条](#progressbar)
-    4. [射击子弹](#shootingbullets)
-    5. [Sprite状态](#spritestates)
-    6. [生成随机外星人](#randomaliens)
-      1. [定时外星人](#timingaliens)
-      2. [外星人的随机开始位置](#randomposition)
-    7. [移动外星人](#movingaliens)
-    8. [让外星人爆炸](#explodealiens)
-    9. [显示得分](#displayingscore)
-    10. [结束和重置游戏](#endinggame2)
-  3. [Flappy Fairy!](#flappyfairy)
-    1. [制作按钮](#makeabutton)
-    2. [让仙女飞](#makingthefairyfly)
-    3. [制作滚动背景](#makeascrollingbackground)
-    4. [仙尘爆炸](#thefairydustexplosions)
-    5. [使用粒子发射器](#useaparticleemitter)
-    6. [创建和移动支柱](#creatingandmovingthepillars)
-5. [与HTML和CSS集成](#htmlIntegration)
-6. [实例指南](#aguidetotheexamples)
+1. [特点](#特点)
+2. [模块](#模块)
+3. [快速启动](#快速启动)
+    1. [页面容器](#页面容器)
+    2. [代码结构](#代码结构)
+    3. [设置启动](#设置启动)
+    4. [加载函数](#加载函数)
+    5. [设置函数](#设置函数)
+    6. [运行函数](#运行函数)
+    7. [更进一步](#更进一步)
+4. [教程](#教程)
+    1. [宝藏猎人](#宝藏猎人)
+        1. [容器页面](#容器页面)
+        2. [初始化](#初始化)
+        3. [定义全局变量](#定义全局变量)
+        4. [设置游戏](#设置游戏)
+            1. [自定义画布](#自定义画布)
+            2. [创建声音对象](#创建声音对象)
+            3. [制作游戏场景](#制作游戏场景)
+            4. [制作精灵](#制作精灵)
+            5. [定位精灵](#定位精灵)
+            6. [分配动态属性](#分配动态属性)
+            7. [创造敌人精灵](#创造敌人精灵)
+            8. [生命栏](#生命栏)
+            9. [游戏结束](#游戏结束)
+            10. [按键交互](#按键交互)
+            11. [游戏状态](#游戏状态)
+        5. [游戏循环的逻辑](#游戏循环的逻辑)
+            1. [移动玩家精灵](#移动玩家精灵)
+            2. [控制精灵](#控制精灵)
+            3. [检测碰撞](#检测碰撞)
+                1. [与宝藏碰撞](#与宝藏碰撞)
+            4. [结束游戏](#结束游戏)
+        6. [使用图像](#使用图像)
+            1. [单个图像](#单个图像)
+                1. [加载图像文件](#加载图像文件)
+                2. [用图像制作精灵](#用图像制作精灵)
+                3. [微调收容区域](#微调收容区域)
+        7. [使用纹理图集](#使用纹理图集)
+            1. [准备图像](#准备图像)
+            2. [加载纹理图集](#加载纹理图集)
+    2. [外星舰队](#外星舰队)
+        1. [加载并使用自定义字体](#加载并使用自定义字体)
+        2. [在浏览器中缩放游戏中心](#在浏览器中缩放游戏中心)
+        3. [加载进度条](#加载进度条)
+        4. [射击子弹](#射击子弹)
+        5. [精灵状态](#精灵状态)
+        6. [随机产生外星人](#随机产生外星人)
+            1. [外星人定时器](#外星人定时器)
+            2. [随机开始位置](#随机开始位置)
+        7. [移动外星人](#移动外星人)
+        8. [让外星人爆炸](#让外星人爆炸)
+        9. [显示分数](#显示分数)
+        10. [结束并重置游戏](#结束并重置游戏)
+    3. [飞扬的仙女!](#飞扬的仙女)
+        1. [制作按钮](#作)
+        2. [让仙女飞翔](#让仙女飞翔)
+        3. [制作滚动背景](#制作滚动背景)
+        4. [仙女爆炸](#仙女爆炸)
+        5. [使用粒子发射器](#使用粒子发射器)
+        6. [创建和移动支柱](#创建和移动支柱)
+5. [集成HTML、CSS](#集成HTML、CSS)
+6. [实例指南](#实例指南)
 
-<a id='features'> </a>
-特征
+特点
 --------
 
 这里是Hexi的核心功能列表：
@@ -167,8 +164,9 @@ JavaScript（ES6 / 7,20015/6），但编译到ES5（使用[Babel](https://babelj
 - 一个`shortestPath`函数，用于通过基于瓦片的环境（如迷宫和`tileBasedLineOfSight`）执行A-Star寻路，以告诉您迷宫游戏环境中的精灵是否可以互相看到。
 - 是的，由于Pixi渲染器提供的[`accessible`](http://www.goodboydigital.com/pixi-becomes-accessible/) 属性（yay Pixi！），Hexi应用程序符合W3C可访问性准则。
 
-<a id='features'> </a>
-###Hexi的模块
+
+模块
+--------
 
 Hexi包含了一些有用的模块，你可以使用其中的任何一个
 这些模块的属性或方法在您的Hexi高级代码中。
@@ -219,9 +217,9 @@ g.bump.hit(spriteOne, spriteTwo);
 如果你真的有雄心，为Hexi提出一个新模块
 开发团队（在这个回购的[Issues](https://github.com/kittykatattack/hexi/issues)中，也许我们会把它加到Hexi的核心！）
 
-<a id='quickstart'> </a>
-Hexi快速启动
-----------------
+
+快速启动
+--------
 
 要快速开始与Hexi合作，请查看快速入门
 项目在Hexi的例子
@@ -250,11 +248,11 @@ source file here](https://github.com/kittykatattack/hexi/blob/master/examples/sr
 （注意：如果你对游戏编程不熟悉，并觉得你需要一个温和的，更有条理的介绍Hexi，请查看[Tutorials](#tutorials) 部分。
 你将学习如何从头开始制作3个完整的游戏，并且每个游戏都逐渐建立在前一个游戏中学到的技能上。）
 
-<a id='thehtmlcontainer'> </a>
-### HTML容器
+
+### 页面容器
 
 你需要开始使用Hexi的唯一文件是
-[`hexi.min.js`](https://github.com/kittykatattack/hexi/blob/master/bin/hexi.min.js)。
+[`hexi.min.js`](https://github.com/kittykatattack/hexi/blob/master/bin/hexi.min.js)
 它有一个令人难以置信的简单"installation"：只需用一个`<script>`标签将其链接到一个HTML页面。
 然后链接您的主要JavaScript文件，其中将包含您的游戏或应用程序代码。以下是典型的HexiHTML容器页面的样子：
 ```html
@@ -291,8 +289,7 @@ Hexi使用三个单独的文件：Pixi渲染器，Hexi的模块和Hexi的`core.j
 您想要使用的特定版本的Pixi。或者，也许你做了一些
 对你想要试用的Hexi模块进行其他疯狂的修改。但通常情况下，您可能永远不需要这样做。
 
-<a id='hexisarchitecture'> </a>
-###Hexi的建筑
+### 代码结构
 
 所有的乐趣都发生在您的主JavaScript文件中。Hexi
 应用程序有一个非常简单但灵活的架构，您可以
@@ -351,8 +348,8 @@ function play(){
 我们来看看这个架构模型是如何用来构建Quick的
 开始申请。
 
-<a id='settingupandstartinghexi'> </a>
-### 1.建立并启动Hexi
+
+### 设置启动
 
 首先，创建一个列出您想要加载的所有文件的数组。快速
 启动项目加载图像文件，字体文件和音乐文件。
@@ -412,8 +409,7 @@ g.start();
 这个很重要！没有调用Hexi不会启动的方法
 开始！
 
-<a id='theloadfunction'> </a>
-### 2.负载函数，在加载时运行
+### 加载函数
 
 如果您在初始化时为Hexi提供了一个名为`load`的函数，则可以显示加载栏并加载进度信息。只需创建一个名为`load`的函数，如下所示：
 ```js
@@ -429,8 +425,8 @@ function load(){
   g.loadingBar();
 }
 ```
-<a id='thesetupfunction'> </a>
-### 3.`setup`函数初始化并创建你的游戏对象
+
+### 设置启动
 
 现在你已经启动了Hexi并加载了所有的文件，你就可以开始了
 制作东西！这发生在`setup`函数中。如果你有任何
@@ -551,8 +547,8 @@ g.state = play;
 `play`状态是一个将在循环中运行的函数，并且是在哪里
 我们所有的应用逻辑是。让我们来看看接下来的工作。
 
-<a id='thesplayfunction'> </a>
-### 4.“play”函数：循环应用程序逻辑
+
+### 运行函数
 
 你在Hexi应用程序中需要的最后一件事是`play`函数。
 ```js
@@ -635,8 +631,7 @@ cat.y += cat.vy;
 ```
 这就是它的全部！这是您了解快速启动应用程序的所有信息，以及几乎所有您需要了解的有关Hexi的信息！
 
-<a id='takingitfurther'> </a>
-###进一步
+### 更进一步
 
 有了这个基本的Hexi建筑，你可以创建任何东西。只需将Hexi的`state`属性设置为任何其他函数即可切换应用程序的行为。就是这样：
 ```js
@@ -650,7 +645,6 @@ g.state = anyStateFunction;
 现在您已对Hexi的工作方式有了一个全面的了解，请仔细阅读
 教程深入细节。
 
-<a id='tutorials'> </a>
 教程
 ---------
 
@@ -670,6 +664,7 @@ g.state = anyStateFunction;
 到达出口（绿色广场）。是的，你必须使用你的
 想象力 - 现在。 
 
+### 宝藏猎人
 以下是完整的JavaScript源代码：
 
 [!Treasure Hunter Source](https://github.com/kittykatattack/hexi/blob/master/tutorials/src/treasureHunter.js)
@@ -706,8 +701,7 @@ Hexi的作品。
 充分评论`examples`文件夹中的代码还详细介绍了特定的和高级的用法的功能，不是在这些教程中涵盖。
 当你完成这些工作教程，`例子`将带你进入你的下一个阶段旅程。
 
-<a id='setingup'> </a>
-####设置HTML容器页面
+#### 容器页面
 
 在您开始使用JavaScript进行编程之前，您需要设置一个
 最小的HTML容器页面。HTML页面加载`hexi.min.js`哪个
@@ -731,8 +725,7 @@ Hexi的作品。
 取决于您的系统，文件路径可能与您的系统不同
 你已经建立了你的项目文件结构。
 
-<a id='initializing'> </a>
-####初始化Hexi 
+#### 初始化
 
 下一步是编写一些初始化和启动Hexi的JavaScript代码 
 根据你指定的一些参数。这一点
@@ -811,8 +804,7 @@ g.start();
 ```
 这是启动Hexi发动机的开关。
 
-<a id='definingglobals'> </a>
-####定义你的“全局”变量
+#### 定义全局变量
 
 Hexi开始后，申报你的比赛的所有变数
 函数将需要使用。
@@ -829,8 +821,8 @@ let dungeon, player, treasure, enemies, chimes, exit,
 空间（http://stackoverflow.com/questions/17058606/why-using-self-executing-function-in-javascript）。或者，如果你想
 做它的花哨的方式，使用JavaScript ES6 / 2015 [模块]（http://exploringjs.com/es6/ch_modules.html）或[类]（https://developer.mozilla.org/en/docs/Web/ JavaScript / Reference / Classes）来执行本地范围。
 
-<a id='setupfunction'> </a>
-####使用设置功能初始化您的游戏
+
+#### 设置游戏
 
 Hexi一开始，它就会在你的游戏中寻找并运行一个功能
 称为`setup`的代码（或者其他想要给它的名字
@@ -864,8 +856,7 @@ function setup() {
 在一个循环中。但是在我们研究这些工作方式之前，让我们先看看它是什么
 `setup`函数中的特定代码会执行。
 
-<a id='creatingsound'> </a>
-#####创建`chimes`声音对象
+##### 创建声音对象
 
 你会记得从上面的代码中我们预先加载了一个声音文件
 进入名为`chimes.wav`的游戏。在您可以在游戏中使用它之前，
@@ -874,8 +865,7 @@ function setup() {
 ```js
 chimes = g.sound("sounds/chimes.wav");
 ```
-<a id='gamescenes'> </a>
-#####创建游戏场景
+##### 创建游戏场景
 
 Hexi有一个叫做`group`的有用方法，可以让你分组游戏对象
 在一起，这样你就可以和他们一起工作。组用于
@@ -907,8 +897,7 @@ gameScene = g.group(spriteOne, spriteTwp, spriteThree);
 
 但是，什么是精灵，你如何制造它们？
 
-<a id='makingsprites'> </a>
-#####制作精灵
+##### 制作精灵
 
 精灵是任何游戏中最重要的元素。精灵是
 只是您可以控制的图形（形状或图像）
@@ -986,8 +975,7 @@ gameScene.addChild(treasure);
 
 让我们多了解一下这些精灵如何定位画布。
 
-<a id='positioningsprites'> </a>
-#####定位精灵
+##### 定位精灵
 
 所有的精灵都有`x`和`y`属性，你可以用它来精确
 在画布上定位精灵。`x`和`y`值是指精灵的像素
@@ -1046,8 +1034,7 @@ spriteOne.putLeft(spriteTwo);
 垂直对齐。您会看到很多关于如何在整个过程中使用这些“放置”方法的示例
 这些教程。
 
-<a id='dynamicproperties'> </a>
-#####分配动态属性
+##### 分配动态属性
 
 在我们继续之前，您需要注意一个小细节。该
 创建精灵的代码还会为其添加“拾取”属性
@@ -1058,8 +1045,7 @@ treasure.pickedUp = false;
 你会看到我们将如何在游戏逻辑中使用`treasure.pickedUp`来帮助我们确定
 比赛的进展。如果需要，可以动态地将任何自定义属性或方法分配给像这样的精灵。
 
-<a id='enemysprites'> </a>
-#####创造敌人精灵
+##### 创造敌人精灵
 
 宝藏猎人中有6个敌人精灵（红色方块）。他们是
 水平间隔均匀但具有随机初始垂直
@@ -1153,11 +1139,10 @@ enemies.push(enemy);
 在后面的代码中，你会看到我们将如何访问这里的所有敌人
 以确定他们是否触摸了该玩家。
 
-<a id='healthbar'> </a>
-#####健康栏
+##### 生命栏
 
 玩家时你会注意到
-触及其中一个敌人，右上角的健康栏的宽度
+触及其中一个敌人，右上角的生命栏的宽度
 屏幕减少。 
 
 ![Treasure Hunter](/tutorials/screenshots/05.png)
@@ -1198,8 +1183,7 @@ healthBar.inner.width = 30;
 ```
 这非常整洁可读，所以我们会保留它！
 
-<a id='gameoverscene'> </a>
-#####游戏结束
+##### 游戏结束
 
 如果玩家的生命值降至零，或玩家设法降低
 将宝藏带到出口处，游戏结束，游戏结束
@@ -1240,8 +1224,7 @@ gameOverScene.visible = false;
 在游戏结束时，我们将设置 `gameOverScene` 的`visible`属性设置为 `true`以显示文本消息。
 我们也会设置`gameScene`的`visible`属性为`false`，这样所有的游戏精灵是隐藏的。
 
-<a id='keyboard'> </a>
-#####键盘互动
+##### 按键交互
 
 用键盘上的箭头键控制播放器（蓝色方块）。
 Hexi有一个内置的`arrowControl`方法，可以让你快速添加
@@ -1268,63 +1251,63 @@ let customKey = g.keyboard(asciiCode);
 淘金者。（你可以在`setup`函数中定义这个代码。）：
 
 ```js
-//使用Hexi的`keyboard`方法创建一些键盘对象。
-//你通常会在`setup`函数中使用这段代码。
-//将ASCII码值作为单个参数提供
-let leftArrow = g.keyboard(37),
-    upArrow = g.keyboard(38),
-    rightArrow = g.keyboard(39),
-    downArrow = g.keyboard(40);
+  //使用Hexi的`keyboard`方法创建一些键盘对象。
+  //你通常会在`setup`函数中使用这段代码。
+  //将ASCII码值作为单个参数提供
+  let leftArrow = g.keyboard(37),
+      upArrow = g.keyboard(38),
+      rightArrow = g.keyboard(39),
+      downArrow = g.keyboard(40);
 
-//左键按下 `press` 方法
-leftArrow.press = () => {
-  //按下按键时更改播放器的速度
-  player.vx = -5;
-  player.vy = 0;
-};
-
-//左键释放 `release` 方法
-leftArrow.release = () => {
-  //如果左箭头已被释放，并且右箭头未关闭，
-  //并且播放器没有垂直移动：
-  //停止播放器
-  if (!rightArrow.isDown && player.vy === 0) {
-    player.vx = 0;
-  }
-};
-
-//上键
-upArrow.press = () => {
-  player.vy = -5;
-  player.vx = 0;
-};
-upArrow.release = () => {
-  if (!downArrow.isDown && player.vx === 0) {
+  //左键按下 `press` 方法
+  leftArrow.press = () => {
+    //按下按键时更改播放器的速度
+    player.vx = -5;
     player.vy = 0;
-  }
-};
+  };
 
-//右键
-rightArrow.press = () => {
-  player.vx = 5;
-  player.vy = 0;
-};
-rightArrow.release = () => {
-  if (!leftArrow.isDown && player.vy === 0) {
+  //左键释放 `release` 方法
+  leftArrow.release = () => {
+    //如果左箭头已被释放，并且右箭头未关闭，
+    //并且播放器没有垂直移动：
+    //停止播放器
+    if (!rightArrow.isDown && player.vy === 0) {
+      player.vx = 0;
+    }
+  };
+
+  //上键
+  upArrow.press = () => {
+    player.vy = -5;
     player.vx = 0;
-  }
-};
+  };
+  upArrow.release = () => {
+    if (!downArrow.isDown && player.vx === 0) {
+      player.vy = 0;
+    }
+  };
 
-//下键
-downArrow.press = () => {
-  player.vy = 5;
-  player.vx = 0;
-};
-downArrow.release = () => {
-  if (!upArrow.isDown && player.vx === 0) {
+  //右键
+  rightArrow.press = () => {
+    player.vx = 5;
     player.vy = 0;
-  }
-};
+  };
+  rightArrow.release = () => {
+    if (!leftArrow.isDown && player.vy === 0) {
+      player.vx = 0;
+    }
+  };
+
+  //下键
+  downArrow.press = () => {
+    player.vy = 5;
+    player.vx = 0;
+  };
+  downArrow.release = () => {
+    if (!upArrow.isDown && player.vx === 0) {
+      player.vy = 0;
+    }
+  };
 
 ```
 
@@ -1341,8 +1324,7 @@ downArrow.release = () => {
 顺序从顶部开始顺时针列出。）
 
 
-<a id='gamestate'> </a>
-#####设置游戏状态
+##### 游戏状态
 
 **游戏状态**是Hexi目前正在运行的功能。什么时候
 Hexi首先启动，运行`setup`函数（或其他任何其他功能）
@@ -1382,8 +1364,7 @@ g.resume();
 ```
 现在让我们来看看Treasure Hunter的“play”功能是如何工作的。 
 
-<a id='gamelogic'> </a>
-####具有播放函数循环的游戏逻辑
+#### 游戏循环的逻辑
 
 正如你刚刚学到的，`play`函数中的所有内容都运行在a中
 连续循环。
@@ -1395,19 +1376,22 @@ function play() {
 这是所有游戏逻辑发生的地方。这是有趣的部分，
 所以让我们来看看`play`函数里面的代码是干什么的。
 
-<a id='movingplayer'> </a>
-#####移动玩家精灵
+##### 移动玩家精灵
 
 宝藏猎人在`play`函数中使用Hexi的`move`方法来移动魔鬼中的精灵
 游戏。
+
 ```js
 g.move(player);
 ```
+
 这相当于编写这样的代码：
+
 ```js
 player.x += player.vx;
 player.y += player.vy;
 ```
+
 它只是通过添加`vx`来更新玩家的'x`和`y`位置
 和'vy'速度值。（请记住，这些值是
 按`press` 和`release` 方法设置。）使用`move`只需保存
@@ -1416,20 +1400,22 @@ player.y += player.vy;
 
 你也可以用一行代码来移动一组精灵
 提供数组作为参数。
+
 ```js
 g.move(arrayOfSprites);
 ```
+
 所以现在你可以轻松地移动播放器，但是当播放器发生什么时，
 玩家到达屏幕的边缘？
 
-<a id='boundries'> </a>
-#####包含屏幕边界内的精灵
+##### 控制精灵
 
-使用Hexi的“包含”方法来保持精灵在界限内
-屏幕。
+使用Hexi的“包含”方法来保持精灵在界限内屏幕。
+
 ```js
 g.contain(player, g.stage);
 ```
+
 第一个参数是你想要包含的精灵，第二个
 参数是任何具有 `x`, `y`, `width`的JavaScript对象
 和`height`属性。 
@@ -1451,6 +1437,7 @@ g.contain(
   }
 );
 ```
+
 这会将`player`精灵包含到由.de定义的区域
 物体的尺寸。如果你想，这真的很方便
 精确地调整对象应该包含的区域。
@@ -1478,8 +1465,7 @@ if(playerHitsEdges) {
 } 
 ```
 
-<a id='collisionenemy'> </a>
-#####与敌人碰撞
+##### 检测碰撞
 
 当玩家击中任何敌人时，健康栏的宽度
 减少，玩家变得半透明。
@@ -1605,8 +1591,7 @@ if (enemyHitsEdges) {
 使其走向相反的方向。这是一个非常简单的**反弹**
 影响。
 
-<a id='collisiontreasure'> </a>
-######碰撞宝藏
+###### 与宝藏碰撞
 
 如果玩家触摸宝藏（黄色方块），即“钟声”
 声音播放。玩家可以
@@ -1683,8 +1668,7 @@ treasure.pickedUp = true;
 现在玩家拿起了宝藏，你怎么能检查
 比赛结束？
 
-<a id='endinggame1'> </a>
-#####结束游戏
+##### 结束游戏
 
 游戏结束有两种方式。玩家的健康可能会用完，
 在这种情况下，游戏丢失了。或者，玩家可以成功携带
@@ -1718,8 +1702,7 @@ function end() {
 从头开始使用这些相同的技术。什么时候
 你准备好了，继续阅读！
 
-<a id='usingimages'> </a>
-###使用图像
+#### 使用图像
 
 有三种主要方式可以在Hexi游戏中使用图像。 
 
@@ -1747,8 +1730,7 @@ let imageSprite = g.sprite("images/theSpriteImage.png");
 （本节中的所有图像均由Lanea Zimmerman创作
 可以找到更多她的作品 [here](http://opengameart.org/users/sharm)。谢谢，Lanea！）
 
-<a id='individualimages'> </a>
-####个人图像
+##### 个人图像
 
 打开并玩下一个版本的寻宝者：
 `02_treasureHunterImages.html`（你可以在`tutorials`中找到它
@@ -1762,8 +1744,7 @@ let imageSprite = g.sprite("images/theSpriteImage.png");
 唯一改变的是精灵的外观。
 这是如何完成的？
 
-<a id='loadingimagefile'> </a>
-#####加载图像文件 
+###### 加载图像文件 
 
 游戏中的每个精灵都使用一个单独的PNG图像文件。你会找到
 教程 `images` 子文件夹中的所有图像。
@@ -1809,8 +1790,7 @@ g.image（ “图像/ blob.png”）
 现在您已经将图像加载到游戏中，让我们来了解如何操作
 用它们制作精灵。
 
-<a id='makingsprites'> </a>
-#####用图像制作精灵
+###### 用图像制作精灵
 
 使用`sprite`方法使用您学习的相同格式创建一个图像精灵
 早。以下是如何使用`dungeon.png`图像创建精灵。
@@ -1864,8 +1844,7 @@ gameScene = g.group(dungeon, exit, player, treasure);
 随着您的游戏理念的发展，您会看到详细的图像 其余的代码在
 游戏可以保持原样。
 
-<a id='finetuning'> </a>
-#####微调收容区域
+###### 微调收容区域
 
 对这个新版本Treasure做了一个小小的改进
 猎人是新的方式，精灵被包含在城墙内
@@ -1889,8 +1868,7 @@ g.contain(
 只需调整`x`, `y`, `width` 和 `height` 值即可
 包含区域看起来很自然，你正在制作的游戏。
 
-<a id='textureatlas'> </a>
-####使用纹理图集
+##### 使用纹理图集
 
 如果你正在研究一个复杂的大型游戏，那么你就需要一个快速而又复杂的游戏
 有效的方式来处理图像。纹理图集可以帮助您做到
@@ -1918,8 +1896,7 @@ tileset JSON数据事实上的标准是这样的格式
 不要使用Texture Packer，类似的工具如 [Shoebox](http://renderhjs.net/shoebox/)会以相同的格式输出JSON文件。让我们了解如何使用它来制作纹理
 纹理打包器的地图集，以及如何将其加载到游戏中。
 
-<a id='preparingimages'> </a>
-#####准备图像
+###### 准备图像
 
 您首先需要为游戏中的每个图像创建单独的PNG图像。
 你已经拥有了寻宝猎人，所以你们都准备好了。打开纹理
@@ -1954,8 +1931,7 @@ tileset JSON数据事实上的标准是这样的格式
 最后 - 所以不断尝试，并在这个存储库中发布问题，如果你
 得到不可能的卡住！
 
-<a id='loadingatlas'> </a>
-#####加载纹理图集
+###### 加载纹理图集
 
 要将纹理图集加载到游戏中，只需包含JSON文件即可
 在Hexi的资产阵列当你初始化游戏。
@@ -2010,8 +1986,7 @@ jsonFile = g.json("jsonFileName.json");
 看一个如何加载纹理图集并使用它的实例
 制作精灵。
 
-<a id='alienarmada'> </a>
-###外星舰队
+#### 外星舰队
 
 本系列教程中的下一个示例游戏是Alien Armada。你可以吗
 摧毁60个外国人，然后摧毁地球？点击
@@ -2043,8 +2018,7 @@ Alien Armada展示了一些你一定会想要的新技术
 到宝藏猎人，加上这些新技术。让我们
 了解它们是如何实施的。
 
-<a id='customfonts'> </a>
-####加载并使用自定义字体
+##### 加载并使用自定义字体
 
 Alien Armada使用名为`emulogic.ttf`的自定义字体来显示
 得分在屏幕的右上角。字体文件是
@@ -2071,8 +2045,7 @@ scoreDisplay = g.text("0", "20px emulogic", "#00FF00", 400, 10);
 ```
 您可以加载和使用TTF，OTF，TTC或WOFF格式的任何字体。
 
-<a id='progressbar'> </a>
-####加载进度条
+##### 加载进度条
 
 Alien Armada加载了三种MP3声音文件：一种是拍摄声音，一种是
 爆炸声和音乐。音乐声音大小约为2 MB
@@ -2121,8 +2094,7 @@ function load(){
 就像`load`函数一样，所以完全取决于你决定什么
 应该会发生或在您的游戏加载时显示的内容。
 
-<a id='shootingbullets'> </a>
-####射击子弹
+##### 射击子弹
 
 你怎么能制造大炮射击子弹？ 
 
@@ -2221,8 +2193,7 @@ g.move(bullets);
 所以现在你知道子弹是如何创建和动画的。但是什么时候发生
 他们打了一个外星人？
 
-<a id='spritestates'> </a>
-####雪碧状态
+##### 精灵状态
 
 当子弹击中外星人时，会出现黄色爆炸图像。这个
 通过给每个外星人精灵两个状态创建简单的效果：一个“正常”
@@ -2298,15 +2269,13 @@ alien.show(alien.states.destroyed);
 游戏代码，按照惯例它只在Hexi的渲染内部使用
 发动机。）
 
-<a id='randomaliens'> </a>
-####产生随机外星人
+##### 随机产生外星人
 
 Alien Armada在14个随机选择的职位中的任何一个职位中生成外籍人
 恰好在舞台的顶部边界之上。外星人首先出现
 很少，但逐渐开始以不断增加的速度出现。这使得游戏逐渐变得越来越困难。我们来看看这两个功能是如何实现的。
 
-<a id='timingaliens'> </a>
-#####定时外星人
+##### 外星人定时器
 
 当游戏开始时，第一个新的外星人在100之后产生
 帧已经过去。一个名为`alienFrequency`的变量，已初始化
@@ -2352,8 +2321,7 @@ if(alienTimer === alienFrequency) {
 已经被创建，以便它可以重新开始计数
 下一个新的外星人。 
 
-<a id='randomposition'> </a>
-#####外星人的随机起始位置
+##### 随机开始位置
 
 在我们产生任何外星人之前，我们需要一个阵列来存储所有的外星人
 精灵。在`setup`中初始化一个名为`aliens`的空数组
@@ -2439,8 +2407,7 @@ aliens.push(alien);
 ```
 所有这些代码开始以稳步增长的速度抽出外星人。
 
-<a id='movingaliens'> </a>
-####移动外星人
+#### 移动外星人
 
 我们如何让外星人移动？以完全相同的方式创造了
 子弹移动。你会注意到上面的代码
@@ -2467,8 +2434,7 @@ g.move(aliens);
 ```
 这会自动更新外星人的位置及其速度。
 
-<a id='explodealiens'> </a>
-####让外星人爆炸
+#### 让外星人爆炸
 
 现在你知道如何改变外星人的状态，你如何使用
 这个技能来制造爆炸效果？这是简化的代码
@@ -2592,8 +2558,7 @@ aliens = aliens.filter(alien => {
 
 这就是游戏的碰撞效果！
 
-<a id='displayingscore'> </a>
-####显示分数
+#### 显示分数
 
 由Alien Armada推出的另一个新功能是一个动态分数
 显示。每次外星人被击中，得分在右上角
@@ -2617,8 +2582,7 @@ scoreDisplay.content = score;
 ```
 这就是它的全部！
 
-<a id='endinggame2'> </a>
-####结束并重置游戏
+#### 结束并重置游戏
 
 游戏结束有两种方式。任一玩家射下60
 外星人，在这种情况下，玩家获胜。或者，外星人之一必须旅行
@@ -2733,8 +2697,7 @@ function reset() {
 外星舰队无数次，只要你喜欢，它会重置并重新启动
 本身就像这样无休无止。
 
-<a id='flappyfairy'> </a>
-###飞扬的童话！
+### 飞扬的仙女
 
 飞扬的仙女是对有史以来最臭名昭着的游戏之一的敬意：[Flappy
 Bird](http://en.wikipedia.org/wiki/Flappy_Bird)。点击
@@ -2768,8 +2731,7 @@ Bird](http://en.wikipedia.org/wiki/Flappy_Bird)。点击
 到本教程中的其他游戏，并增加了这些新技术。让我们
 了解它们是如何实施的。
 
-<a id='makeabutton'> </a>
-####制作一个按钮
+#### 制作按钮
 
 当你按下“Go”按钮时，游戏开始。“Go”按钮是一个特殊的精灵
 称为`button` 。`button` 精灵有3个图像帧状态：up，over和
@@ -2911,8 +2873,7 @@ animatedSprite.playAnimation(walkCycle);
 有了它，请参阅`keyframeAnimation.html`，
 `examples`文件夹中的`textureAtlasAnimation.html`和`animationStates.html`文件。
 
-<a id='makingthefairyfly'> </a>
-####让仙女飞翔
+#### 让仙女飞翔
 
 现在你知道如何制作一个精灵，Flappy Fairy是如何制作的
 当你点击游戏画面时会触发飞行动画？
@@ -2978,8 +2939,7 @@ if (fairy.vy < 0 && fairy.oldVy > 0) {
 ```
 这就是仙女飞行的方式！
 
-<a id='makeascrollingbackground'> </a>
-####制作滚动背景
+#### 制作滚动背景
 
 Flappy Fairy的一个有趣的新功能是它具有无限滚动功能
 云从右到左移动的背景。
@@ -3021,8 +2981,7 @@ sky.tileX -= 1;
 这就是你需要做的无限滚动
 背景。
 
-<a id='particleeffects'> </a>
-####粒子效应
+#### 粒子效应
 
 你如何创造像火，烟，魔法和爆炸的效果？ 
 你制造许多小小的精灵; 数十，数百或数千个。
@@ -3092,10 +3051,9 @@ createParticles(
 模拟从液体到火的一切。在Flappy Fairy中，它被使用了
 创造仙尘。
 
-<a id='thefairydustexplosions'> </a>
-#####仙尘爆炸
+##### 仙女爆炸
 
-当飞扬的童话击中一个街区时，她消失在一阵灰尘中。 
+当飞扬的仙女击中一个街区时，她消失在一阵灰尘中。 
 
 ![Fairy dust explosion](/tutorials/screenshots/27.png)
 
@@ -3163,8 +3121,7 @@ if (fairyVsBlock && fairy.visible) {
 }
 ```
 
-<a id='useaparticleemitter'> </a>
-#####使用粒子发射器
+##### 使用粒子发射器
 
 粒子发射器只是一个简单的计时器，可以在其中创建粒子 
 固定间隔。这意味着，而不是仅仅调用
@@ -3240,8 +3197,7 @@ dust = g.particleEmitter(
 ```
 你现在可以用`play`和`stop`方法控制`dust`发射器。
 
-<a id='creatingandmovingthepillars'> </a>
-####创建和移动支柱
+#### 创建和移动支柱
 
 现在你知道FLAPY精灵是如何实现Hexi的一些特殊特征的。
 一些有趣的和有用的效果。但是，如果你是新的游戏
@@ -3335,8 +3291,7 @@ if (finish.gx > 256) {
 请确保您查看完整的Flappy Fairy源代码
 `examples`文件夹，以便您可以在适当的上下文中看到所有这些代码。
 
-<a id='htmlIntegration'> </a>
-＃集成HTML和CSS
+### 集成HTML、CSS
 
 Hexi与HTML和CSS无缝协作。你可以自由地混合Hexi精灵和
 代码与HTML元素，并使用Hexi的架构来建立一个HTML
@@ -3470,10 +3425,6 @@ HTML和Hexi之间的这种松散集成意味着你可以自由地自定义这一
 与你的Hexi精灵一起，并设计任何类型的自定义布局
 需要。这只是HTML！而且，是的，你可以编写你的HTML
 如果你愿意，可以使用Angular，React或[Elm](http://elm-lang.org)（Go Elm !!）。
-
-<a id='aguidetotheexamples'> </a>
-＃即将推出：示例指南
-
 
 
 
